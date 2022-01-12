@@ -16,6 +16,8 @@ Markdown Examples
 
 [link](http://google.com)
 
+![Image](https://en.wikipedia.org/wiki/Monkey#/media/File:Bonnet_macaque_(Macaca_radiata)_Photograph_By_Shantanu_Kuveskar.jpg)
+
 >Blockquote
 ---
 * List

@@ -125,7 +125,7 @@ javac WhereAmI.java; java WhereAmI; scp WhereAmI.java cs15lwi22aay@ieng6.ucsd.ed
 OUTPUT
 ![Image](lab-report-1-images/output.png)
 
-In this command, the first javac and java were executed on the local machine in a terminal open in the directory it was located in. These two commands were divided by a semi-colon, `";"`, which allowed for running the multiple commands on the same line. The command `scp WhereAmI.java` copys the java file onto the remote server. `ssh cs15lwi22aay@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"` connects to the remote server and then runs javac and java on that remote server.
+In this command, the first javac and java were executed on the local machine in a terminal open in the directory it was located in. These two commands were divided by a semi-colon, `";"`, which allowed for running the multiple commands on the same line. The command `scp WhereAmI.java` copys the java file onto the remote server. `ssh cs15lwi22aay@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"` connects to the remote server and then runs javac and java on that remote server. Given that an SSH key is present on both the client and server, only a total a of 3 keystrokes are used when executing this command. An 'enter' at the start of the command, another 'enter' when running `scp` and a final 'enter' when ssh is used to run the WhereAmI.java on the remote server to confirm that the SSH key password is blank.
 
 ## References
 1. https://ucsd-cse15l-w22.github.io/week/week1/

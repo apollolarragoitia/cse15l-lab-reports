@@ -2,7 +2,7 @@
 
 ## Part 1 - Installing Visual Studio Code
 
-When going about installing Visual Studio Code (VSC), the simplest manner is to download the installer found at https://code.visualstudio.com/ and follow the on-screen instructions. For most, the version suggested by the Visual Studio Code website will be the appropiate version. In cases such as mine, where the version suggested is not the most optimal or appropiate for your system, other versions of Visual Studio Code that best match your working environment/setup can be found at https://code.visualstudio.com/#alt-downloads. In my case, I ended up downloading the Mac Apple Sillicon version for the most optimized experience given my working environment.
+When going about installing Visual Studio Code (VSC), the simplest manner is to download the installer found [here](https://code.visualstudio.com/) and follow the on-screen instructions. For most, the version suggested by the Visual Studio Code website will be the appropiate version. In cases such as mine, where the version suggested is not the most optimal or appropiate for your system, other versions of Visual Studio Code that best match your working environment/setup can be found [here](https://code.visualstudio.com/#alt-downloads). In my case, I ended up downloading the Mac Apple Sillicon version for the most optimized experience given my working environment.
 
 ![Image](lab-report-1-images/vscode.png)
 

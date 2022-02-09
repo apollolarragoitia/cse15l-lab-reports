@@ -7,7 +7,8 @@ Given the circusmtances of what happened, I feel it best to include a preface to
 ## PART 1 - Symptom Zero
 The first of the symptoms I ran into whiel working on this lab was one unrelated to the code itself, but instead to the working environment itself. When initally attemping to run the code as is when cloned from GitHub, I was unable too. This was due to the fact the Java JDK I was working with was Java 8, while one of the functions used was from Java 11. This resulted in a `java.lang.Error: Unresolved compilation problem:` when attemping to test file one.
 
-As mentioned, this was an error on the part of working environment. To fix this, I had to reinstall Java JDK.
+As mentioned, this was an error on the part of working environment. To fix this, I had to reinstall Java JDK and specify which JDK to use in VSCode. 
+
 
 ## PART 2 - Symptom 1
 

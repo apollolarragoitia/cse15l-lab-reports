@@ -48,6 +48,9 @@ For the moment, Ive temporarily removed the checker for images that I believed w
 
 ## PART 4 - Symptom 3
 ![image](lab-report-2-images/symptom3.png)
+
+[GitHub Commit for Symptom 3](https://github.com/apollolarragoitia/markdown-parse/commit/a6c9b7b50ed0acda422dc76cfa546a6e929b91cf)
+
 Input: test-file5.md
 Expected Output: []
 
@@ -56,5 +59,7 @@ Actual Output: [page.com]
 Suspected Reason: I believe that this error is caused due to there not being a check if the data within parenthesis are valid links in markdown format. That is to say, the current code interprets anything in parenthesis, whether it is in a valid position adjacent to a bracket pair or in an invalid position not adjacent to a bracket pair.
 
 ## PART 4.1 - Symptom 3 Solution
+[GitHub Commit for Symptom 3 Solution](https://github.com/apollolarragoitia/markdown-parse/commit/3fc756428ae30ea55b84790edb87a08b48d2a72f)
+
 
 My hunch was right and it seems that a lack of a check for the brackets and parenthesis being adjacent to one another was the culprit. I've added an if statement that checks if the char to the right of the closeBracket is an open parenthesis. If it is, that means the following parenthesis pair is valid and the link is added. If not, then the parenthesis pair are not a valid link given it is not adjacent to a brackets pair and is not added.

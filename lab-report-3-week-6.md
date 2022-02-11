@@ -13,7 +13,7 @@ This tells the terminal to recurssively copy the current directory, which is mar
 Upon executing the command to copy the directory, the terminal will print the following, showing the status of
 the files being copied.
 
-![image](lab-report-3-images/screeshot2.png).
+![image](lab-report-3-images/screenshot2.png)
 
 Once the files are done copying, we can verify this by accessing the ieng6 account and inspecting the directory of markdown-parse. This can be done by doing the following command `ssh cs15lwi22aay@ieng6.ucsd.edu "ls markdown-parse"`. This connects to the ieng6 server and then list the contents of directory markdown-parse.
 ![image](lab-report-3-images/screenshot3.png).
@@ -36,7 +36,20 @@ and then run int using
 ![image](lab-report-3-images/compile.png)
 Compiling and executing the MarkdownParseTest.
 
-## 
+## Step 3 - Optimizing Running 
+
+The methods shown so far are effective, but are there more efficent manners of going about it. You could copy the directory, accessing the directory in the server and compile it with one command. The following command copys the directory of markdown-parse to the ieng6 server and execute MarkDownParseTest.
+
+`ssh cs15lwi22aay@ieng6.ucsd.edu "mkdir markdown-parse"; scp -r *.java *.md lib/ cs15lwi22aay@ieng6.ucsd.edu:markdown-parse; ssh cs15lwi22aay@ieng6.ucsd.edu "cd markdown-parse; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/javac MarkdownParse.java; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
+
+
+The first line ` ssh cs15lwi22aay@ieng6.ucsd.edu "mkdir markdown-parse"` creates the directory of markdown-parse in ieng6 server if the directory does not already exist. The line `scp -r *.java *.md lib/ cs15lwi22aay@ieng6.ucsd.edu:~/markdown-parse` copies only the java source code, the .md files used in testing, and everything located in the lib folder. The line ` ssh cs15lwi22aay@ieng6.ucsd.edu "cd markdown-parse;` connects to the remote directory and changes the directory to the markdown-parse folder. The line `javac MarkdownParse.java;` compiles the source code of MarkdownParse.java. The line `javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"` compiles MarkdownParseTest.java and runs it.
+
+![image](lab-report-3-images/execute.png)
+
+## Sources
+1. https://ucsd-cse15l-w22.github.io/week/week5/#group-choice-3-copy-whole-directories-with-scp--r
+2. https://ucsd-cse15l-w22.github.io/week/week6/
 
 
 

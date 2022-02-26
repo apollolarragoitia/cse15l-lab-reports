@@ -1,4 +1,4 @@
-# Lab Report 2 - When Test acccumulate
+# Lab Report 2 - When Test Acccumulate
 
 ## Part  0  - Preface
 

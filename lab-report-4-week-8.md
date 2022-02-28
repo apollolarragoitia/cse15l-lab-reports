@@ -26,7 +26,7 @@ Snippet 2 Input:
 [some escaped \[ brackets \]](example.com)
 ```
 
-Snippet 2 Expected MarkdowParse Output:`a.com,a.com(()), example.com
+Snippet 2 Expected MarkdowParse Output: `a.com,a.com(()), example.com`
 
 Snippet 3 Input: 
 ```
@@ -62,7 +62,24 @@ Snippet 3 MarkdownParse expected output: `https://ucsd-cse15l-w22.github.io/`
 
 Step 2.1 - Outputs using our implementation
 
+Snippet 1
+![Snippet 1](lab-report-4-images/mymarkdownsnippet1.png)
+
+Snippet 2
+![Snippet 2](lab-report-4-images/mymarkdownsnippet2.png)
+
+Snippet 3
+![Snippet 3](lab-report-4-images/mymarkdownsnippet3.png)
+
+
+
 Step 2.2 - Outputs using reviewed implementation
+
+![Snippet 1](lab-report-4-images/reviewedmarkdownsnippet1.png)
+
+![Snippet 2](lab-report-4-images/reviewedmarkdownsnippet2.png)
+
+![Snippet 3](lab-report-4-images/reviewedmarkdownsnippet1.png)
 
 # Step 3 - Possible Changes to adress errors
 

@@ -81,6 +81,8 @@ Step 2.2 - Outputs using reviewed implementation
 
 ![Snippet 3](lab-report-4-images/reviewedmarkdownsnippet1.png)
 
-# Step 3 - Possible Changes to adress errors
+# Step 3 - Possible Changes to Address Errors
+
+
 
 

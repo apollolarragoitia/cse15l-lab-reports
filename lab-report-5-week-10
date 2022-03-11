@@ -1,0 +1,16 @@
+# Lab Report 5 - Common Mark Spec Test Comparrison
+
+## Step 1 - Finding differences between implementations.
+Firstly, in order to recognize any differences between my implemention and the 
+implementation provided, I ran the following bash script, bash.sh.
+
+```
+for file in test-files/*.md;
+do
+    echo $file
+    java MarkdownParse $file
+done
+```
+
+The following parameters were also added onto the bashscript.
+`bash script.sh > [repoNameHere].txt`

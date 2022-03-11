@@ -4,6 +4,9 @@
 
 The following snippets are given as test inputs for the MarkdownParse.java project.
 
+[Our Markdown](https://github.com/apollolarragoitia/markdown-parse)
+[Reviewed Markdown](https://github.com/Obarquinho/markdown-parse)
+
 Snippet 1 Input:
 ```
 `[a link`](url.com)

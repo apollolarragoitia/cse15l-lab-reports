@@ -6,6 +6,11 @@ The following snippets are given as test inputs for the MarkdownParse.java proje
 
 [Our Markdown](https://github.com/apollolarragoitia/markdown-parse)
 [Reviewed Markdown](https://github.com/Obarquinho/markdown-parse)
+    
+It was ran with the following Junit Tests:
+
+![Image](lab-report-4-images/junit.png)
+
 
 Snippet 1 Input:
 ```
@@ -85,6 +90,8 @@ Step 2.2 - Outputs using reviewed implementation
 ![Snippet 3](lab-report-4-images/reviewedmarkdownsnippet1.png)
 
 # Step 3 - Possible Changes to Address Errors
+
+I had ran into errors for all of my test cases. However, it seems that errors for most of them appear to be addresable.
 
 
 

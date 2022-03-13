@@ -112,6 +112,17 @@ In this case, the first found bracket pair are highlight in back ticks, alongsid
 `[` some escaped \[ brackets \`]`]`(`example.com`)`
 ```
 
+With the final issue present in snippet 3, I believe that this issue cannot be solved without changing the manner in which data is passed through. Currently, my implementation is passing through the .md files as an extremely long String. However, in doing so, I end up losing information regarding the line count, line breaks, or any line breaks seperating code. An implementation that I could use would to instead use a Scanner to go through the file line by line using a while hasNext() loop. If a blank line is found and the , then all variables could be set to 0, signifying that a line break occured and overloading the integer 0 to represent such a scenario. However, it would also result in having to come up with a new manner of parseing valid links that take more then one line such as.
+
+```
+[this title text is really long and takes up more than 
+one line](
+    https://ucsd-cse15l-w22.github.io/
+)
+```
+
+Something I think that could work would be to use a Scanner to find the index where line breaks occur, then parse through the file as a String as I normally would, however when passing through the index at which line breaks were found, the variables such as closed parentheis, open parenthesis, and closed bracket get bet set to -2 to signify that an line break occured which esesentially isolated the previous Markdown text from the next.
+
 
 
 

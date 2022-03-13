@@ -93,6 +93,26 @@ Step 2.2 - Outputs using reviewed implementation
 
 I had ran into errors for all of my test cases. However, it seems that errors for most of them appear to be addresable.
 
+For the first issue, it appears that there to be an error in incorrectly parseing links where the header has inline code syntax.I do not believe a simple code change code be used to address this issue. This is due to the fact that there are a variety of cases where the usage of inline code syntax still results in an valid output. Take for example, in snippet 1, where inline code syntax is used in the url of google.com. Despite it being surrondeded by "`" to signify to that it is a piece of incline code, it appears that the backtick within the url is not recognized when it comes to the implementation of line block code.
+
+Furthermore, the second example of google has the following syntax which results in a valid link to be parsed. It appears that it has to do with both the backtick being located within the text box of the URL, yet when attemping to surrond it by a normal single line code block, it results in an invalid link.There are just to many incosistencies and a lack of Markdown knowledge on this level to implement a catch-all fix for backticks.
+```
+[`cod[e`](google.com)
+```
+For the issue with the second snippet, it also appears that a simple code solution would not be possible. In this scenario, my code did not properly parse the following link.
+```
+[some escaped \[ brackets \]](example.com)
+```
+
+This is due to the fact that my implementation is currently reliant of comparing the first found instance of a bracket pair to the first found instance of a parenthesis pair.
+
+In this case, the first found bracket pair are highlight in back ticks, alongside the first found parenthesis pair. As you can see, the first pair combination parsed are the brackets are not directly adjacent to the parenthesis pair. My implementation checks that the index of the open parenthesis is equal to the index of the closed bracket found plus one to ensure only valid syntax is parsed. However, in this, the usage of nested brackets results in comparing the wrong bracket pair to the parenthesis pair containing the URL. To implement this code change, I would need to come up with a set of methods that is able to parse through nested brackets. For example, I could have it check the characters present within the index range of the first found close bracket to the second found open bracket, checking for any nested brackets or open brackets that may render it an invalud close bracket/open bracket pair. While this solution could work for this problem, it would not be a dynamic solution to solving the issue of parseing links with multiple nested brackets present. 
+
+```
+`[` some escaped \[ brackets \`]`]`(`example.com`)`
+```
+
+
 
 
 

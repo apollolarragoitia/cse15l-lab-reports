@@ -1,4 +1,4 @@
-# Lab Report 3 - Copying Whole Directories with SCP -R
+# Lab Report 4
 
 ## Step 1 - Snippets and Expected Outputs
 
